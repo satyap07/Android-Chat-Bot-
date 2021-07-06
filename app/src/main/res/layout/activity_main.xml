@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chat_bot_rv"
+        android:layout_above="@id/linear_layout"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linear_layout">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@drawable/curved_boundary_bot"
+            android:id="@+id/chat_ev"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@android:color/black"
+            android:layout_marginBottom="3dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_send"
+            android:contentDescription="SEND"
+            android:layout_margin="6dp"
+            android:layout_marginBottom="9dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
